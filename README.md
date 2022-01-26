@@ -21,11 +21,27 @@ The boxplots in visualization 10 group the variables “M”, “R”, and “F�
 <img width="254" alt="image" src="https://user-images.githubusercontent.com/95591222/151230231-2773674f-30a8-4318-8f38-8c123bb53c17.png">
 <img width="301" alt="image" src="https://user-images.githubusercontent.com/95591222/151230261-b96c01b4-f213-4c60-ba8d-3c57badcb74d.png">
 
-#Date Modeling
-##Using five different data modeling techniques we can see what model gives us the best output. The model’s output is as follows: 
+Date Modeling
+
+Using five different data modeling techniques we can see what model gives us the best output. The model’s output is as follows: 
 Decision Tree (DT)- The decision tree gives us an average misclassification score of 8.3%. This implies that the model is wrong 8.3% of the time. The average accuracy score using a 10-fold cross validation is 9.1%
+
 Logistic Regression (LOG)- This model’s average misclassification score implies the model is wrong 7.8% of the time. The average accuracy score using a 10-fold cross validation is 9.2%
+
 kNN- The average misclassification score implies the model is wrong 8.5% of the time. The average accuracy score using a 10-fold cross validation is 9.1%
+
 Discriminant Analysis (DA)- The discriminate analysis gives us an average misclassification score of 8.1%. This implies the model is wrong 8.1% of the time. The average accuracy score using a 10-fold cross validation is 9.1%
+
 Neural Networks (MLP)- The average misclassification score implies the model is wrong 7.8% of the time. The average accuracy score using a 10-fold cross validation is 9.2%
-                In conclusion, both neural networks and logistic models have the same accuracy score of 0.922. The data is heavily skewed for negative results therefore the true positives for each model are very small relative to data set.
+
+In conclusion, both neural networks and logistic models have the same accuracy score of 0.922. The data is heavily skewed for negative results therefore the true positives for each model are very small relative to data set.
+
+#Roc Curve
+
+The Roc curve tells us how good the model is for distinguishing the given classes, in terms of the predicted probability. Based on the ROC curves the neural networks model (MLP) at 0.529 is the best model and the kNN at 0.497 is the worst. This roc curve suggests that all the models aren’t any better than simply guessing. 
+
+<img width="215" alt="image" src="https://user-images.githubusercontent.com/95591222/151230638-5246255f-2005-4413-b2bd-0586db21481c.png">
+
+#Lift Charts
+
+The lift curve is an evaluation curve that assesses the performance of your model. It shows how many times more than average the model reaches targets. The lift charts and cumulative gains models do not perform significantly better than using no model. This shows the models are not giving us a very good prediction. It is recommended to make sure preprocessing parameters are correct or may suggest we have bad data. 
